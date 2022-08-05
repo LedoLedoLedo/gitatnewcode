@@ -24,10 +24,6 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +31,303 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body, nav {
+  background-color: #F2F2F2;
+}
+
+body {
+  border: 0;
+  margin: 0;
+  /* background: rgba(0,212,255,1); */
+  /* background: linear-gradient(10deg, rgba(0,212,255,1) 50%,rgb(229, 255, 0) 75%, rgb(209, 116, 29) 100%); */
+  /* background: linear-gradient(10deg, rgba(0,212,255,1) 30%,rgb(229, 255, 0) 40%, rgb(0,212,255,1) 100%); */
+  /* background: linear-gradient(10deg, rgb(216, 242, 247) 20%,rgb(0, 217, 255) 40%,rgb(216, 242, 240) 65%, rgb(216, 242, 247) 100%); */
+  
+  /* background: #4158D0; */
+  /* background: linear-gradient(43deg, #4158D0 0%, #C850C0 30%, #FFCC70 66%, #ffffff 100%); */
+  /* background-image:url(./assets/concertAppPic.jpeg); */
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  opacity: 0.5;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #000;
+  /* border: 2px solid rgb(229 255 0); */
+  color: #fff;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+  /* box-shadow: rgb(229 255 0) 0px 0px 0px 2px inset, rgb(0 0 0) 10px -10px 0px -3px, rgb(229 255 0) 10px -10px, rgb(0 0 0) 20px -20px 0px -3px, rgb(229 255 0) 20px -20px, rgb(0 0 0) 30px -30px 0px -3px, rgb(229 255 0) 30px -30px, rgb(0 0 0) 40px -40px 0px -3px, rgb(0 212 255) 40px -40px; */
+  
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+
+  /* color: rgb(229 255 0); */
+}
+
+nav h1 {
+  margin-left: 50px;
+}
+
+nav a {
+  color: #000;
+  margin-right: 50px;
+  /* color: rgb(229 255 0); */
+}
+
+
+
+p {
+ margin-top: 20vh;
+
+}
+
+.wholePage {
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.searchPage, .signUpPage {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signUpPage {
+  height: 100vh;
+}
+
+.signUpPage button {
+  width: 10em;
+}
+
+.eventContainer {
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.eventCard {
+  border-radius: 10px;
+  background-color: rgba(255,255,255,1);
+  width: 350px;
+  height: 400px;
+  overflow: scroll;
+  margin: 20px;
+  position: relative;
+  box-shadow: rgb(0 0 0 / 15%) 0px 3px 3px 0px;
+  /* box-shadow: rgba(0,212,255,1) 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(229, 255, 0) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(229, 255, 0) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(229, 255, 0) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(229, 255, 0) 40px -40px; */
+  /* box-shadow: rgb(229 255 0) 0px 0px 0px 2px inset, rgb(0 0 0) 10px -10px 0px -3px, rgb(229 255 0) 10px -10px, rgb(0 0 0) 20px -20px 0px -3px, rgb(229 255 0) 20px -20px, rgb(0 0 0) 30px -30px 0px -3px, rgb(229 255 0) 30px -30px, rgb(0 0 0) 40px -40px 0px -3px, rgb(0 212 255) 40px -40px; */
+}
+
+.eventCard .img-wrapper {
+  height: 60%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.linkWrapper {
+  width: 100%;
+
+}
+
+.eventCard a {
+  color: #fff;
+  background-color: #0D0640;
+  border-radius: 5px;
+  padding: 10px 85px;
+}
+
+.eventCard .eventCardTop {
+  width: 100%;
+  height: 85%;
+  overflow: scroll;
+}
+
+span.spacerSpan {
+  padding-bottom: 25px;
+  visibility: hidden;
+}  
+
+.img-wrapper img {
+  min-width: 100%;
+}
+
+.eventCard h1 {
+  font-size: 2em;
+}
+
+.heroImage {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #000;
+  /* background: linear-gradient(10deg, rgba(0,212,255,1) 30%,rgb(229, 255, 0) 40%, rgb(0,212,255,1) 100%); */
+  /* background: linear-gradient(10deg, rgb(37 1 1) 30%,rgb(255 0 0) 40%, rgb(0 0 0) 100%); */
+  background-image: url(./assets/hero-06.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 50vh;
+  width: 95vw;
+  border-radius: 10px;
+  margin: 50px;
+  /* box-shadow: rgb(229 255 0) 0px 0px 0px 2px inset, rgb(0 0 0) 10px -10px 0px -3px, rgb(229 255 0) 10px -10px, rgb(0 0 0) 20px -20px 0px -3px, rgb(229 255 0) 20px -20px, rgb(0 0 0) 30px -30px 0px -3px, rgb(229 255 0) 30px -30px, rgb(0 0 0) 40px -40px 0px -3px, rgb(0 212 255) 40px -40px; */
+}
+
+.heroImage .textWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: flex-start;
+  color: #fff;
+  text-align: left;
+  height: 100%;
+  max-width: 95vw;
+  padding-right: 5vw;
+  overflow: scroll;
+}
+
+.heroImage h1 {
+  font-size: 4em;
+  text-transform: uppercase;
+  margin: 25px 0px;
+}
+
+.heroImage p {
+  font-size: 1em;
+  margin: 10px;
+  margin-left: 0px;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  /* padding: 12px 20px; */
+  margin: 0 5px;
+  display: inline-block;
+  /* border: 1px solid #ccc; */
+  box-sizing: border-box;
+  /* opacity: 0.5; */
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #0D0640;
+  /* border: 2px solid rgb(229 255 0); */
+  border-radius: 10px;
+  color: #fff;
+  padding: 14px 20px;
+  margin: 0 5px;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+/* Add a hover effect for buttons */
+button:hover, .eventCard a:hover, button:focus, .eventCard a:focus {
+  opacity: 0.8;
+  /* box-shadow: rgb(229 255 0) 0px 0px 0px 2px inset, rgb(0 0 0) 10px -10px 0px -3px, rgb(229 255 0) 10px -10px, rgb(0 0 0) 20px -20px 0px -3px, rgb(229 255 0) 20px -20px, rgb(0 0 0) 30px -30px 0px -3px, rgb(229 255 0) 30px -30px, rgb(0 0 0) 40px -40px 0px -3px, rgb(0 212 255) 40px -40px; */ 
+}
+
+.searchWrapper {
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  max-height: 70px;
+  margin-bottom: 5vw;
+}
+
+.searchWrapper input[type=text], input[type=text], input[type=password] {
+  border: 4px solid #0D0640;
+  border-radius: 10px;
+}
+
+.searchWrapper button {
+  background-color: #0D0640;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 1em;
+  width: 5vw;
+  min-width: 60px;
+}
+
+button img {
+  width: 80%;
 }
