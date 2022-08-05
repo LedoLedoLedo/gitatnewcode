@@ -115,7 +115,7 @@ p {
   align-items: center;
 }
 
-.searchPage, .signUpPage {
+.searchPage, .signUpPage, .logInPage, .postPage {
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -123,17 +123,32 @@ p {
   align-items: center;
 }
 
-.signUpPage {
+.signUpPage, .logInPage, .postPage {
   height: 100vh;
 }
 
-.signUpPage input[type=text], .signUpPage input[type=password], .signUpPage  button {
+.signUpPage input[type=text], .signUpPage input[type=password], .signUpPage  button,
+.logInPage input[type=text], .logInPage input[type=password], .logInPage  button,
+.postPage button {
   margin: 10px 0px;
 }
 
-.signUpPage button {
+.signUpPage button, .logInPage button, .postPage button {
   width: 100%;
   font-size: 1em;
+}
+
+.postPage p {
+  margin-top: 10px;
+}
+
+.logInPage button:last-of-type {
+  background-color: transparent;
+  color: #0D0640;
+}
+
+.logInPage button:last-of-type:hover, .logInPage button:last-of-type:focus, a:focus, a:hover {
+  color: #4028a2;
 }
 
 .eventContainer {
@@ -175,6 +190,15 @@ p {
   padding: 10px 85px;
 }
 
+.eventCard h1 {
+  font-size: 1.5em;
+}
+
+.eventDescription, .eventInfo {
+  text-align: left;
+  width: 80%;
+}
+
 .eventCard .eventCardTop {
   width: 100%;
   height: 85%;
@@ -201,9 +225,6 @@ span.spacerSpan {
   min-width: 100%;
 }
 
-.eventCard h1 {
-  font-size: 2em;
-}
 
 .heroImage {
   display: flex;
@@ -269,7 +290,8 @@ button {
 
 /* Add a hover effect for buttons */
 button:hover, .eventCard a:hover, button:focus, .eventCard a:focus {
-  opacity: 0.8;
+  /* opacity: 0.8; */
+  background-color: #4028a2;
 }
 
 .searchWrapper {
@@ -284,7 +306,7 @@ button:hover, .eventCard a:hover, button:focus, .eventCard a:focus {
 }
 
 /* Full-width inputs */
-input[type=text], input[type=password] {
+input[type=text], input[type=password], textarea {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -294,7 +316,8 @@ input[type=text], input[type=password] {
 }
 
 input[type=text]:hover, input[type=password]:hover, input[type=text]:focus, input[type=password]:focus {
-  opacity: 0.5;
+  /* opacity: 0.5; */
+  border: 4px solid #4028a2;
 }
 
 input[type=text], input[type=password] {
@@ -314,6 +337,10 @@ input[type=text], input[type=password] {
   width: 5vw;
   min-width: 60px;
   height: 100%;
+}
+
+.searchWrapper button:hover, .searchWrapper button:focus {
+  background-color: #4028a2;
 }
 
 button img {

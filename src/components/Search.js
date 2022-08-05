@@ -84,13 +84,15 @@ const Search = () => {
                   {" "}
                   {event.dates.end ? event.dates.end.localTime : ""}{" "}
                 </span>
+                <br />
                 <span className="eventVenue" key={i}>
                   {" "}
                   {event._embedded.venues[0].name
                     ? event._embedded.venues[0].name
                     : ""}{" "}
                 </span>
-
+                <br />
+                <br />
                 <span className="eventInfo" key={i}>
                   {" "}
                   {event.info ? event.info : ""}{" "}
