@@ -1,3 +1,4 @@
+
 body, nav {
   background-color: #F2F2F2;
 }
@@ -203,13 +204,18 @@ p {
   width: 350px;
   height: 400px;
   margin: 20px;
+  text-align: center;
 }
 
-.eventCard .img-wrapper {
+.eventCard .imgWrapper {
   height: 60%;
   overflow: hidden;
   display: flex;
   justify-content: center;
+}
+
+.eventCard .textWrapper {
+  padding: 12px;
 }
 
 .linkWrapper {
@@ -254,7 +260,7 @@ span.spacerSpan {
   visibility: hidden;
 }  
 
-.img-wrapper img {
+.imgWrapper img {
   min-width: 100%;
 }
 

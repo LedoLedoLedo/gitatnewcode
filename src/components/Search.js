@@ -60,48 +60,52 @@ const Search = () => {
             <div className="eventCard">
               {/* Figure out how to add text to ternary and what keys to use so doesn't repeat. */}
               <div className="eventCardTop">
-                <div className="img-wrapper">
+                <div className="imgWrapper">
                   <img src={event.images[1].url} alt="event" />
                 </div>
-                <h1 key={i}>{event.name}</h1>
-                <span className="eventStatus" key={i}>
-                  {" "}
-                  {event.dates.status.code ? event.dates.status.code : ""}{" "}
-                </span>
-                <span className="eventDate" key={i}>
-                  {" "}
-                  {event.dates.start.localDate
-                    ? event.dates.start.localDate
-                    : ""}
-                </span>
-                <span className="eventStart" key={i}>
-                  {" "}
-                  {event.dates.start.localTime
-                    ? event.dates.start.localTime
-                    : ""}{" "}
-                </span>
-                <span className="eventEnd" key={i}>
-                  {" "}
-                  {event.dates.end ? event.dates.end.localTime : ""}{" "}
-                </span>
-                <br />
-                <span className="eventVenue" key={i}>
-                  {" "}
-                  {event._embedded.venues[0].name
-                    ? event._embedded.venues[0].name
-                    : ""}{" "}
-                </span>
-                <br />
-                <br />
-                <span className="eventInfo" key={i}>
-                  {" "}
-                  {event.info ? event.info : ""}{" "}
-                </span>
-                <span className="eventDescription" key={i}>
-                  {" "}
-                  {event.description ? event.description : ""}{" "}
-                </span>
-                <span className="spacerSpan">This is Hidden Space</span>
+                <div className="textWrapper">
+                  <h1 key={i}>{event.name}</h1>
+                  <span className="eventStatus" key={i}>
+                    {" "}
+                    {event.dates.status.code
+                      ? event.dates.status.code
+                      : ""}{" "}
+                  </span>
+                  <span className="eventDate" key={i}>
+                    {" "}
+                    {event.dates.start.localDate
+                      ? event.dates.start.localDate
+                      : ""}
+                  </span>
+                  <span className="eventStart" key={i}>
+                    {" "}
+                    {event.dates.start.localTime
+                      ? event.dates.start.localTime
+                      : ""}{" "}
+                  </span>
+                  <span className="eventEnd" key={i}>
+                    {" "}
+                    {event.dates.end ? event.dates.end.localTime : ""}{" "}
+                  </span>
+                  <br />
+                  <span className="eventVenue" key={i}>
+                    {" "}
+                    {event._embedded.venues[0].name
+                      ? event._embedded.venues[0].name
+                      : ""}{" "}
+                  </span>
+                  <br />
+                  <br />
+                  <span className="eventInfo" key={i}>
+                    {" "}
+                    {event.info ? event.info : ""}{" "}
+                  </span>
+                  <span className="eventDescription" key={i}>
+                    {" "}
+                    {event.description ? event.description : ""}{" "}
+                  </span>
+                  <span className="spacerSpan">This is Hidden Space</span>
+                </div>
               </div>
               <div className="linkWrapper">
                 <a href={event.url} target="_blank" rel="noreferrer">
