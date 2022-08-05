@@ -29,6 +29,7 @@ const AllPosts = () => {
     <div className="allPostsPage">
       <h1>Gig Postings</h1>
       <h3>{status}</h3>
+      <Link id="addBtn" to="/posts"></Link>
       {posts.map((post) => {
         return (
           <div className="postCard">

@@ -79,6 +79,18 @@ p {
   height: 100vh;
 }
 
+ #signUpBtn, #loginBtn {
+  text-transform: uppercase;
+  align-self: center;
+  margin-top: 10px;
+}
+
+.logInPage span, .signUpPage span {
+  position: absolute;
+  bottom: 0;
+}
+
+
 .signUpPage input[type=text], .signUpPage input[type=password], .signUpPage  button,
 .logInPage input[type=text], .logInPage input[type=password], .logInPage  button,
 .postPage button {
@@ -94,12 +106,12 @@ p {
   margin-top: 10px;
 }
 
-.logInPage button:last-of-type {
+/* .logInPage button:last-of-type {
   background-color: transparent;
   color: #0D0640;
-}
+} */
 
-.logInPage button:last-of-type:hover, .logInPage button:last-of-type:focus, a:focus, a:hover {
+a:focus, a:hover {
   color: #4028a2;
 }
 
@@ -179,7 +191,6 @@ p {
 .postCard button.delete {
   padding: 0;
   margin: 0;
-  width: 5em;
   font-size: 1em;
   height: 1em;
   background: transparent;
@@ -195,6 +206,7 @@ p {
   overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   height: 80px;
   width: 80px;
   margin: 10px;
@@ -328,8 +340,7 @@ button {
 }
 
 /* Add a hover effect for buttons */
-button:hover, .eventCard a:hover, button:focus, .eventCard a:focus {
-  /* opacity: 0.8; */
+button:hover, .eventCard a:hover, button:focus, .eventCard a:focus, a#addBtn:hover, a#addBtn:focus {
   background-color: #4028a2;
 }
 
@@ -367,6 +378,9 @@ form {
   max-width: 600px;
   width: 50vw;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .searchWrapper input[type=text] {
@@ -442,3 +456,18 @@ button img {
 }
 
 
+a#addBtn {
+  background-color: #0D0640;
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  background-image: url(./assets/add-icon.png);
+  background-repeat: no-repeat;
+  background-size: 35%;
+  background-position: center;
+  position: fixed;
+  top: 100px;
+  right: 75px;
+  cursor: pointer;
+  z-index: 5;
+}

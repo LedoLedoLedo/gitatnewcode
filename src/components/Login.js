@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { post } from "../services/service";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   //step 1 get user input
@@ -38,7 +39,7 @@ const Login = () => {
         console.log("RESPONSE", response.data);
         localStorage.setItem("token", response.data);
         //  localStorage.setItem("username", response.data.username);
-        navigate("/posts");
+        navigate("/all");
       }
     } catch (err) {
       setStatus("Something went wrong");
@@ -74,7 +75,10 @@ const Login = () => {
         />
 
         <button type="submit">Login</button>
-        <button type="submit">Sign up</button>
+        <span>Don't have an account?</span>
+        <Link to="/signup" id="signUpBtn">
+          Sign Up
+        </Link>
       </form>
     </div>
   );

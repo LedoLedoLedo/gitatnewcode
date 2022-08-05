@@ -1,6 +1,7 @@
 import React from "react";
 import { post } from "../services/service";
 import { useParams, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
   const [username, setUsername] = React.useState("");
@@ -48,6 +49,10 @@ const Signup = () => {
           placeholder="password"
         />
         <button type="submit">Create Account</button>
+        <span>Already have an account?</span>
+        <Link to="/login" id="loginBtn">
+          Login
+        </Link>
       </form>
       <p>{status}</p>
     </div>
