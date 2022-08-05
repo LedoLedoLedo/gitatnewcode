@@ -1,38 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 body, nav {
   background-color: #F2F2F2;
 }
@@ -45,31 +10,14 @@ body {
   width: 100vw;
 }
 
-/* Add padding to containers */
-.container {
-  padding: 16px;
-}
-
 /* The "Forgot password" text */
 span.psw {
   float: right;
   padding-top: 16px;
 }
 
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-    display: block;
-    float: none;
-  }
-  .cancelbtn {
-    width: 100%;
-  }
-}
-
 a {
   text-decoration: none;
-  font-size: 1.5em;
 }
 
 nav {
@@ -82,8 +30,8 @@ nav {
   top: 0;
   left: 0;
   width: 100vw;
-
-  /* color: rgb(229 255 0); */
+  position: sticky;
+  z-index: 5;
 }
 
 nav h1 {
@@ -93,14 +41,17 @@ nav h1 {
 nav a {
   color: #000;
   margin-right: 50px;
-  /* color: rgb(229 255 0); */
 }
-
-
 
 p {
  margin-top: 20vh;
 
+}
+
+#content {
+ text-align: left;
+ margin: auto 50px;
+ color: rgba(0,0,0,.4);
 }
 
 .wholePage {
@@ -160,15 +111,98 @@ p {
   align-items: center;
 }
 
-.eventCard {
+.eventCard, .postCard {
   border-radius: 10px;
   background-color: rgba(255,255,255,1);
+  overflow: scroll;
+  position: relative;
+}
+
+.eventCard:hover, .postCard:hover, .eventCardL:focus, .postCard:focus {
+  box-shadow: rgb(0 0 0 / 15%) 0px 3px 3px 0px;
+}
+
+.postCard {
+  margin: 5px;
+  width: 95vw;
+  min-height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.postCard .postCardLeft, .postCard .postCardCenter, .postCard .postCardRight {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 100px;
+}
+
+.postCardActions {
+  margin-top: 12px;
+}
+
+.postCard .postCardCenter {
+  width: 100%;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 10px 0px;
+}
+
+.postCard .postCardLeft {
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  margin: 0px 10px;
+}
+
+.postCard .postCardRight {
+  width: 150px;
+  padding: 10px;
+  color: rgba(0,0,0,.4);
+}
+
+.postCardContent .postCardUserName a {
+  text-transform: lowercase;
+  color: #4028a2;
+  padding-right: 10px;
+}
+
+.postCardUserName a:hover, .postCardUserName a:focus {
+  color: #4028a2;
+}
+
+.postCard button.delete {
+  padding: 0;
+  margin: 0;
+  width: 5em;
+  font-size: 1em;
+  height: 1em;
+  background: transparent;
+  color: rgba(0,0,0,.4);
+  text-transform: capitalize;
+  width: min-content;
+}
+
+.postCard .profileIcon {
+  background-color: #0D0640;
+  border-radius: 100px;
+  background-image: url(./assets/icon-03.png);
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80px;
+  width: 80px;
+  margin: 10px;
+}
+
+.eventCard {
   width: 350px;
   height: 400px;
-  overflow: scroll;
   margin: 20px;
-  position: relative;
-  box-shadow: rgb(0 0 0 / 15%) 0px 3px 3px 0px;
 }
 
 .eventCard .img-wrapper {
@@ -180,14 +214,13 @@ p {
 
 .linkWrapper {
   width: 100%;
-
 }
 
 .eventCard a {
   color: #fff;
   background-color: #0D0640;
   border-radius: 5px;
-  padding: 10px 85px;
+  padding: 15px 100px;
 }
 
 .eventCard h1 {
@@ -231,7 +264,7 @@ span.spacerSpan {
   justify-content: flex-end;
   align-items: center;
   background-color: #000;
-  background-image: url(./assets/hero-06.jpg);
+  background-image: url(./assets/hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 70vh;
@@ -396,6 +429,10 @@ button img {
   margin-top: 0px;
 }
 
-.postCard {
-  border: 2px solid red;
+.allPostsPage h1 {
+  position: sticky;
+  top: 10px;
+  z-index: 5;
 }
+
+
