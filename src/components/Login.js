@@ -48,34 +48,33 @@ const Login = () => {
   return (
     <div className="logInPage">
       <form onSubmit={create}>
-        <div class="container">
-          {/* <label for="uname"><b>Username</b></label> */}
-          <input
-            value={username}
-            onChange={(e) => {
-              setUsername(e.target.value);
-            }}
-            type="text"
-            placeholder="Username"
-            name="uname"
-            required
-          />
+        <h2>Please Login</h2>
+        <label for="uname">Username</label>
+        <input
+          value={username}
+          onChange={(e) => {
+            setUsername(e.target.value);
+          }}
+          type="text"
+          placeholder="Username"
+          name="uname"
+          required
+        />
 
-          {/* <label for="psw"><b>Password</b></label> */}
-          <input
-            value={password}
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }}
-            type="password"
-            placeholder="Password"
-            name="psw"
-            required
-          />
+        <label for="psw">Password</label>
+        <input
+          value={password}
+          onChange={(e) => {
+            setPassword(e.target.value);
+          }}
+          type="password"
+          placeholder="Password"
+          name="psw"
+          required
+        />
 
-          <button type="submit">Login</button>
-          <button type="submit">Sign up</button>
-        </div>
+        <button type="submit">Login</button>
+        <button type="submit">Sign up</button>
       </form>
     </div>
   );

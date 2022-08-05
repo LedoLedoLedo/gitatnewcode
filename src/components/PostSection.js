@@ -29,7 +29,8 @@ const CreatePost = () => {
   return (
     <div className="postPage">
       <form onSubmit={create}>
-        <label for="postGig">Post a gig: </label>
+        <h2>Share Your Own Event</h2>
+        {/* <label for="postGig">Post a gig: </label> */}
         <textarea
           columns={40}
           rows={10}

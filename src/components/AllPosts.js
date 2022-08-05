@@ -26,19 +26,19 @@ const AllPosts = () => {
   };
 
   return (
-    <div>
-      <h2>All Posts</h2>
+    <div className="allPostsPage">
+      <h2>Gig Postings</h2>
       <h3>{status}</h3>
       {posts.map((post) => {
         return (
-          <div>
-            <p>
+          <div className="postCard">
+            <h4>
               {/* Created by:{post.creatorId.username} */}
               <Link to={`/users/${post.creatorId._id}`}>
                 {post.creatorId.username}
               </Link>
-            </p>
-            <h3>{post.content}</h3>
+            </h4>
+            <p>{post.content}</p>
             <button
               className="delete"
               onClick={() => {

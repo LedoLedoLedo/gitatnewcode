@@ -31,16 +31,16 @@ const Signup = () => {
 
   return (
     <div className="signUpPage">
-      <h2>Create an Account</h2>
       <form onSubmit={create}>
-        {/* <label>username</label> */}
+        <h2>Create an Account</h2>
+        <label>Username</label>
         <input
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           placeholder="username"
         />
-        {/* <label>password</label> */}
+        <label>Password</label>
         <input
           type="password"
           value={password}
