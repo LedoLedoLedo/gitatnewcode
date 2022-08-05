@@ -215,22 +215,31 @@ span.spacerSpan {
   align-items: flex-start;
   color: #fff;
   text-align: left;
-  height: 100%;
+  /* height: 100%; */
   max-width: 95vw;
   padding-right: 5vw;
   overflow: scroll;
 }
 
 .heroImage h1 {
-  font-size: 4em;
+  font-size: 3em;
   text-transform: uppercase;
-  margin: 25px 0px;
+  font-weight: 100;
+  font-family: 'Work Sans', sans-serif;
 }
 
 .heroImage p {
   font-size: 1em;
   margin: 10px;
   margin-left: 0px;
+}
+
+.heroImage p, .heroImage span {
+  background: rgba(0,0,0,1);
+  background-color: #0D0640;
+  padding: 5px 15px;
+  margin: 20px;
+  line-height: 2;
 }
 
 /* Set a style for all buttons */
@@ -328,7 +337,7 @@ button img {
   justify-content: center;
   align-items: center;
   text-align: left;
-  background-color: #F29F05;
+  /* background-color: #F29F05; */
 }
 
 .aboutPage h2 {

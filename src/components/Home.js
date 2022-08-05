@@ -10,7 +10,11 @@ const Home = () => {
       <div className="heroImage">
         <article className="textWrapper">
           <h1>
-            Find <br /> where <br /> it's at
+            <span>Find</span>
+            <br />
+            <span>where</span>
+            <br />
+            <span>it's at</span>
           </h1>
           <p>All your local events in one place</p>
         </article>
