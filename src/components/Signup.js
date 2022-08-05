@@ -33,17 +33,19 @@ const Signup = () => {
     <div className="signUpPage">
       <h2>Create an Account</h2>
       <form onSubmit={create}>
-        <label>username</label>
+        {/* <label>username</label> */}
         <input
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          placeholder="username"
         />
-        <label>password</label>
+        {/* <label>password</label> */}
         <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          placeholder="password"
         />
         <button type="submit">Create Account</button>
       </form>
