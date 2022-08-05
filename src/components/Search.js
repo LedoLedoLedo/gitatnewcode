@@ -102,7 +102,10 @@ const Search = () => {
                 <span className="spacerSpan">This is Hidden Space</span>
               </div>
               <div className="linkWrapper">
-                <a href={event.url}> Buy Ticket </a>
+                <a href={event.url} target="_blank" rel="noreferrer">
+                  {" "}
+                  Buy Ticket{" "}
+                </a>
               </div>
             </div>
           );
